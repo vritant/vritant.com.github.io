@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { 
   ArrowUpRight, 
+  Download,
   ExternalLink, 
   Linkedin, 
   Mail, 
@@ -17,6 +18,7 @@ import {
   ChevronRight
 } from 'lucide-react';
 import { BIO_MARKDOWN, EXPERIENCES, ARTICLES, HOBBIES, FEATURED_PROJECT, EDUCATION, ACHIEVEMENTS } from './constants';
+import resumePdf from './images/VritantJainResume.pdf';
 
 const SimpleMarkdown: React.FC<{ content: string; small?: boolean }> = ({ content, small }) => {
   const lines = content.split('\n');
@@ -65,6 +67,14 @@ const App: React.FC = () => {
               title="LinkedIn"
             >
               <Linkedin size={20} />
+            </a>
+            <a 
+              href={resumePdf} 
+              download="VritantJainResume.pdf"
+              className="w-11 h-11 rounded-full border border-white/20 text-white flex items-center justify-center hover:bg-white hover:text-black hover:scale-110 transition-all"
+              title="Download Resume"
+            >
+              <Download size={20} />
             </a>
             <a 
               href="mailto:adarshvritant@gmail.com" 
