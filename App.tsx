@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { 
   ArrowUpRight, 
-  Download,
+  FileDown,
   ExternalLink, 
   Linkedin, 
   Mail, 
@@ -74,7 +74,7 @@ const App: React.FC = () => {
               className="w-11 h-11 rounded-full border border-white/20 text-white flex items-center justify-center hover:bg-white hover:text-black hover:scale-110 transition-all"
               title="Download Resume"
             >
-              <Download size={20} />
+              <FileDown size={20} />
             </a>
             <a 
               href="mailto:adarshvritant@gmail.com" 
